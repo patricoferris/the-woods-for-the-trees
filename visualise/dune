@@ -1,0 +1,5 @@
+(executable
+ (name csv_to_geojson)
+ (libraries eio_main geojsone csv wkt))
+
+(vendored_dirs wkt.~dev)
