@@ -12,7 +12,7 @@ let row_to_geojson s =
   Feature.v ~properties:(`O [ "id", `String id ]) geo
 
 let main fs stdout =
-  Csve.with_file (fs / "street_trees.csv") @@ fun ic ->
+  Csve.with_file (fs / Sys.argv.(1)) @@ fun ic ->
   (* Ignore the header... *)
   ignore (Csv.next ic);
   let features = Csv.fold_left ~f:(fun acc row -> row_to_geojson row :: acc) ~init:[] ic in
