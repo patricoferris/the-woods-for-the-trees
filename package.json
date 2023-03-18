@@ -2,8 +2,8 @@
   "name": "the-woods-for-the-trees",
   "private": true,
   "scripts": {
-    "build": "slidev build --out dist/presentation --base /presentation",
-    "dev": "slidev --open",
+    "build": "slidev build --out dist/presentation --base /the-woods-for-the-trees/presentation",
+    "dev": "slidev build --out dist/presentation --base /presentation",
     "export": "slidev export"
   },
   "dependencies": {
