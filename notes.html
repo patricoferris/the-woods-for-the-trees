@@ -1,0 +1,134 @@
+<style> body { max-width: 50%; margin: auto; font-size: 1.2em; } </style>
+<h1 id="Notes-and-Descriptions-for-the-Presentation">Notes and Descriptions for the Presentation</h1>
+
+<ul><li><a href='#Slide-1-The-Woods-for-the-Trees'>Slide 1: The Woods for the Trees</a>
+</li><li><a href='#Slide-2-Definitions'>Slide 2: Definitions</a>
+</li><li><a href='#Slide-3-and-4-Why-Visualise-and-How-about-now'>Slide 3 and 4: Why Visualise and How about now?</a>
+</li><li><a href='#Slides-5-and-6-Climate-Strips'>Slides 5 and 6: Climate Strips</a>
+</li><li><a href='#Slide-7-Data-Formats'>Slide 7: Data Formats</a>
+</li><li><a href='#Slide-9-and-10-Copernicus-and-Seagrass'>Slide 9 and 10: Copernicus and Seagrass</a>
+</li><li><a href='#Slide-11-Demo'>Slide 11: Demo</a>
+</li><li><a href='#Slide-12-Accessibility'>Slide 12: Accessibility</a>
+</li></ul>
+
+<h3 id="Slide-1-The-Woods-for-the-Trees">Slide 1: The Woods for the Trees</h3>
+
+<h4 id="Description">Description</h4>
+
+<p>The opening slide contains a photo by <a href='https://unsplash.com/@kmitchhodge?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText'>K. Mitch Hodge</a> from <a href='https://unsplash.com/photos/2202brFZ6pI?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText'>Unsplash</a> as the background. It is Tullymore Forest Park in Northern Ireland. It shows a stream with many trees in a variety of shades of green. The title is &quot;The Wood for the Trees&quot; which is overlayed on top with the subtitle &quot;Visualising Environmental Data&quot; by Patrick Ferris.</p>
+<h4 id="Dicussion">Dicussion</h4>
+
+<p>I&#39;m <a href='https://patrick.sirref.org'>Patrick Ferris</a>, a Research Assistant with the Energy and Environment Group at the Department of Computer Science and Technology.</p>
+<p>This presentation is all about visualisations and how they can be used with environmental data. There will be a strong focus on higher-level questions like what it means to visualise something, why bother etc.? Later we will then create some simple visualisations in the browser. The goal is not to become experts in some library <code>X</code> for doing visualisations. There&#39;s simply not enough time in a 60 minute presentation.</p>
+<h3 id="Slide-2-Definitions">Slide 2: Definitions</h3>
+
+<h4 id="Description_1">Description</h4>
+
+<p>Two definitions are shown on screen:</p>
+<blockquote><p>You gotta see it in your mind. Can you picture that?</p>
+<p> Dr Teeth and the Electric Mayhem</p>
+<p>The act or an example of creating an image, etc. to represent something</p>
+<p> Cambridge Dictionary</p>
+</blockquote>
+
+<h4 id="Discussion">Discussion</h4>
+
+<p>What exactly is a visualisation? In English, we usually mean two quite related things. Either, the act of imagining something in your mind like thinking of the answer to &quot;Where do you see yourself in 5 years?&quot; or creating a representation of something else.</p>
+<h3 id="Slide-3-and-4-Why-Visualise-and-How-about-now">Slide 3 and 4: Why Visualise and How about now?</h3>
+
+<h4 id="Description_2">Description</h4>
+
+<p>This slide has no images only text. There is some CSV text showing rows of data for points on a map. Each row has a name, a longitude and a latitude.</p>
+<p>The second slide shows the same points only plotted on to a map of Belfast. This makes it much easier to find the two points that are the closest.</p>
+<h4 id="Discussion_1">Discussion</h4>
+
+<p>This is a jumping off point for considering what are we trying to do when we visualise environmental data (or any data for that matter). What are the trade-offs, what is the agenda, what have we lost along the way?</p>
+<p>Here we have a few important points to make:</p>
+<ul><li>Raw data does not necessarily fit well with many people&#39;s ability to make inferences or recognise patterns, certainly not in a textual format.</li><li>Instead, many people are good at recognising spatial patterns and relationships. If we want to make the point that two points (i.e. a longitude and latitude pair) are close together then representing them spatially on a map is a good idea.</li><li>The raw data is now also contextualised: their points in and around Belfast city.</li><li>However, on the map we&#39;ve decided to remove the point labels along with the exact floating point number for the longitude and latitude. This means we can no longer answer precisely the two points that are closest together nor can we tell how close they actually are.</li></ul>
+
+<h3 id="Slides-5-and-6-Climate-Strips">Slides 5 and 6: Climate Strips</h3>
+
+<h4 id="Description_3">Description</h4>
+
+<p>These two slides show the same image but the first has been altered to appear as it might for people with <a href='https://www.nhs.uk/conditions/colour-vision-deficiency/'>protanopia</a>, a colour-vision deficiency that results from an insensitivity to red light. The image is quite famous, called <a href='https://showyourstripes.info/s/globe'>climate stripes</a>.</p>
+<h4 id="Discussion_2">Discussion</h4>
+
+<p>Accessibility and context matters. A quick caveat that a lot of the points I&#39;m about to raise are <a href='https://showyourstripes.info/s/globe'>actually pretty well-handled by the University of Reading&#39;s online visualisation</a> as we shall see.</p>
+<p>The climate stripes show the relative difference between the average global temperature and the average between 1971-2000. From left to right, we span the years 1850-2021 with a low of around -0.6 degrees celsius to +0.6.</p>
+<p>The first image tries to show how the climate stripes without any other context to someone with protanopia are hard to read and make any good inference from.</p>
+<p>The second image, is the normal climate stripes that have been used on the cover of <a href='https://www.penguin.co.uk/books/446610/the-climate-book-by-thunberg-greta/9780241547472'>Greta Thunberg&#39;s The Climate Book</a> -- and the point this, presented like this they aren&#39;t much better. We don&#39;t know the time period, the scale, what the baseline is etc.</p>
+<p>Finally, the third image solves lots of these problems but would probably not look great on the front cover of a book.</p>
+<h3 id="Slide-7-Data-Formats">Slide 7: Data Formats</h3>
+
+<h4 id="Description_4">Description</h4>
+
+<p>A boring slide with bullet points for a few data formats which are explained in the next discussion section.</p>
+<h4 id="Discussion_3">Discussion</h4>
+
+<p>Environmental data comes in all sorts of weird and wonderful data formats. We can&#39;t get into all of them, or all of the details but we&#39;ll take a quick tour of the most popular ones.</p>
+<h5 id="Images-png-jpeg-and-tif">Images: <code>png</code>, <code>jpeg</code> and <code>tif</code></h5>
+
+<h5 id="JSON-GeoJSON-and-TopoJSON">JSON: GeoJSON and TopoJSON</h5>
+
+<p><a href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON'>JSON</a> is a format for representing structured data, it is often easiest to think about it a bit like a dictionary i.e. key-value pairs.</p>
+<p><a href='https://www.rfc-editor.org/rfc/rfc7946'>GeoJSON</a> is a standardised (by the IETF) format built on top of JSON. It is essentially a schema for representing geospatial data in JSON. Here&#39;s an example:</p>
+<pre class='json'><code class='json'>{
+  &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;geometry&quot;: {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [102.0, 0.5]},
+      &quot;properties&quot;: {&quot;name&quot;: &quot;A&quot;}
+    },
+  ]
+}</code></pre>
+
+<p><a href='https://github.com/topojson/topojson-specification'>TopoJSON</a> optimises GeoJSON by utilising the topological information of the geospatial primitives to store less data. Concretely, if you have two polygons that share a boundary (e.g. the border between Scotland and England) then in TopoJSON this will only be stored once whereas in GeoJSON the points will be stored twice.</p>
+<h5 id="XML-kml">XML: <code>kml</code></h5>
+
+<p><code>XML</code> (extensible markup language) is format for storing arbitrary data. <code>KML</code> is the <em>Keyhole Markup Language</em> which adds some geospatial specific features such as place marks and polygons. Google Earth uses KML, here&#39;s an example:</p>
+<pre class='kml'><code class='kml'>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;kml xmlns=&quot;http://www.opengis.net/kml/2.2&quot;&gt;
+&lt;Document&gt;
+&lt;Placemark&gt;
+  &lt;name&gt;Belfast City&lt;/name&gt;
+  &lt;description&gt;Belfast City&lt;/description&gt;
+  &lt;Point&gt;
+    &lt;coordinates&gt;-76.3833333,17.8833333,0.&lt;/coordinates&gt;
+  &lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;/Document&gt;
+&lt;/kml&gt;</code></pre>
+
+<p><code>GML</code> is another variant that also is very useful for incorporating things like sensor data given it has primitives for <em>time</em>, <em>unit of measurement</em> etc.</p>
+<h5 id="Shapefiles">Shapefiles</h5>
+
+<p>Shapefiles are quite tightly coupled with GIS software tools, and instead of diving into that feel free <a href='https://en.wikipedia.org/wiki/Shapefile'>to have a look at the Wikipedia page</a>. The high-level comment is that they store vector GIS data.</p>
+<h3 id="Slide-9-and-10-Copernicus-and-Seagrass">Slide 9 and 10: Copernicus and Seagrass</h3>
+
+<h4 id="Description_5">Description</h4>
+
+<p>The first slide shows data from Copernicus:</p>
+<blockquote><p>Copernicus is the Earth observation component of the European Union’s Space programme, looking at our planet and its environment to benefit all European citizens. It offers information services that draw from satellite Earth Observation and in-situ (non-space) data.</p>
+</blockquote>
+
+<p>The second slide is a screenshot of the <a href='https://patricoferris.github.io/ni-forests/'>NI Forests App</a> for the seagrass section. It shows seagrass polygons in Strangford Lough coupling high-resolution satellite images with structured data.</p>
+<h4 id="Discussion_4">Discussion</h4>
+
+<p>The Copernicus image shows the <a href='https://land.copernicus.eu/global/products/fapar'>Fraction of Absorbed Photosynthetically Active Radation (FAPAR)</a>. The PAR part is the solar raditation in the spectral ranger that is used by vegetation to produce organic material. We are then interested in the part of the PAR that reaches Earth that is usefully absorbed by plants. We can then infer things like canopy productivity from it for example.</p>
+<p>The seagrass data is a mixture of <a href='https://www.opendatani.gov.uk/@department-of-agriculture-environment-and-rural-affairs/subtidal-and-intertidal-seagrass-beds3'>opendatani</a> and information from the <a href='https://www.projectseagrass.org'>Seagrass Project</a> who are doing very cool <a href='https://seagrassspotter.org'>citizen science</a>. The <a href='https://catchmentbasedapproach.org/learn/seagrass-restoration-handbook/'>seagrass restoration handbook</a> is an accessible and interesting read on the subject in the UK.</p>
+<h3 id="Slide-11-Demo">Slide 11: Demo</h3>
+
+<p>A demo was then given including:</p>
+<ul><li><a href='http://patricoferris.github.io/the-woods-for-the-trees/visualise'>Some simple trees plotted on a map</a></li><li><a href='https://patricoferris.github.io/ni-forests/'>NI Forests</a></li><li><a href='https://staging.quantify.earth/#/gola'>4C Quantify Earth</a></li><li><a href='https://staging.quantify.earth/#/globe'>4C Globe</a></li></ul>
+
+<h3 id="Slide-12-Accessibility">Slide 12: Accessibility</h3>
+
+<p>Through out the presentation, matters of accessibility were referenced to and in part these notes try to improve a little on that situation as well. However, it would take at least another presentation to talk about matters of accessibility in data visualtion.</p>
+<p>I thought I would point to one interesting research paper called <a href='https://athersharif.me/documents/assets-2022-voxlens-geospatial.pdf'>Understanding and Improving Information Extraction From Online Geospatial Data Visualizations for Screen-Reader Users</a> in which the <a href='https://www.youtube.com/watch?v=_ACIJafIRuU'>VoxLens</a> (an open-source multi-modal solution that improves data visualization accessibility) tools in extended to include geospatial queries.</p>
+<p>In one of the <a href='https://dl.acm.org/doi/10.1145/3441852.3471202'>original papers</a> they found</p>
+<blockquote><p>Our results show that due to the inaccessibility of online data visualizations, screen-reader users extract information 61.48% less accurately and spend 210.96% more time interacting with online data visualizations compared to non-screen-reader users</p>
+</blockquote>
+
+<p>Clearly there is a lot of room for improvement and research in this area.</p>
+<p>Thanks for reading!</p>
