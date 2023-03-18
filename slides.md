@@ -103,23 +103,6 @@ layout: bullets
  - Raw: `csv`, `txt`
 
 ---
-
-# Sources of Data
-
-Where can we find data to use in research, visualisations and beyond?
-
-## NASA/ESA
- - Global Ecosystem Dynamics Investigation (GEDI)
- - Copernicus Sentinel satellites
-
-## Government Open Data
- - https://www.opendatani.gov.uk
-
-## Citizen Science
- - In the UK, [Seagrass](https://orca.cardiff.ac.uk/id/eprint/106421/3/Citizen%20science%20for%20securing%20a%20future%20for%20seagrass.pdf)
-
-
----
 layout: intro-image
 image: './imgs/2023-03-13-00_00_2023-03-13-23_59_Vegetation_Indices_FAPAR_.jpg'
 ---
@@ -130,3 +113,22 @@ image: './imgs/2023-03-13-00_00_2023-03-13-23_59_Vegetation_Indices_FAPAR_.jpg'
 layout: intro-image
 image: './imgs/seagrass-ni.png'
 ---
+
+
+---
+layout: section
+---
+
+# Demo
+
+---
+layout: section
+---
+
+# Accessibility
+
+---
+layout: section
+---
+
+# Thank you

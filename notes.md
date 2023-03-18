@@ -1,5 +1,15 @@
 # Notes and Descriptions for the Presentation
 
+<ul><li><a href='#Slide-1-The-Woods-for-the-Trees'>Slide 1: The Woods for the Trees</a>
+</li><li><a href='#Slide-2-Definitions'>Slide 2: Definitions</a>
+</li><li><a href='#Slide-3-and-4-Why-Visualise-and-How-about-now'>Slide 3 and 4: Why Visualise and How about now?</a>
+</li><li><a href='#Slides-5-and-6-Climate-Strips'>Slides 5 and 6: Climate Strips</a>
+</li><li><a href='#Slide-7-Data-Formats'>Slide 7: Data Formats</a>
+</li><li><a href='#Slide-9-and-10-Copernicus-and-Seagrass'>Slide 9 and 10: Copernicus and Seagrass</a>
+</li><li><a href='#Slide-11-Demo'>Slide 11: Demo</a>
+</li><li><a href='#Slide-12-Accessibility'>Slide 12: Accessibility</a>
+</li></ul>
+
 ### Slide 1: The Woods for the Trees
 
 #### Description
@@ -125,4 +135,42 @@ Environmental data comes in all sorts of weird and wonderful data formats. We ca
 
 Shapefiles are quite tightly coupled with GIS software tools, and instead of diving into that feel free [to have a look at the Wikipedia page](https://en.wikipedia.org/wiki/Shapefile). The high-level comment is that they store vector GIS data.
 
-### Slide 8, 9 and 10: Sources of Data
+### Slide 9 and 10: Copernicus and Seagrass
+
+#### Description
+
+The first slide shows data from Copernicus:
+
+> Copernicus is the Earth observation component of the European Union’s Space programme, looking at our planet and its environment to benefit all European citizens. It offers information services that draw from satellite Earth Observation and in-situ (non-space) data.
+
+The second slide is a screenshot of the [NI Forests App](https://patricoferris.github.io/ni-forests/) for the seagrass section. It shows seagrass polygons in Strangford Lough coupling high-resolution satellite images with structured data.
+
+#### Discussion
+
+The Copernicus image shows the [Fraction of Absorbed Photosynthetically Active Radation (FAPAR)](https://land.copernicus.eu/global/products/fapar). The PAR part is the solar raditation in the spectral ranger that is used by vegetation to produce organic material. We are then interested in the part of the PAR that reaches Earth that is usefully absorbed by plants. We can then infer things like canopy productivity from it for example.
+
+The seagrass data is a mixture of [opendatani](https://www.opendatani.gov.uk/@department-of-agriculture-environment-and-rural-affairs/subtidal-and-intertidal-seagrass-beds3) and information from the [Seagrass Project](https://www.projectseagrass.org) who are doing very cool [citizen science](https://seagrassspotter.org). The [seagrass restoration handbook](https://catchmentbasedapproach.org/learn/seagrass-restoration-handbook/) is an accessible and interesting read on the subject in the UK.
+
+
+### Slide 11: Demo
+
+A demo was then given including:
+
+ - [Some simple trees plotted on a map](http://patricoferris.github.io/the-woods-for-the-trees/visualise)
+ - [NI Forests](https://patricoferris.github.io/ni-forests/)
+ - [4C Quantify Earth](https://staging.quantify.earth/#/gola)
+ - [4C Globe](https://staging.quantify.earth/#/globe)
+
+### Slide 12: Accessibility
+
+Through out the presentation, matters of accessibility were referenced to and in part these notes try to improve a little on that situation as well. However, it would take at least another presentation to talk about matters of accessibility in data visualtion.
+
+I thought I would point to one interesting research paper called [Understanding and Improving Information Extraction From Online Geospatial Data Visualizations for Screen-Reader Users](https://athersharif.me/documents/assets-2022-voxlens-geospatial.pdf) in which the [VoxLens](https://www.youtube.com/watch?v=_ACIJafIRuU) (an open-source multi-modal solution that improves data visualization accessibility) tools in extended to include geospatial queries.
+
+In one of the [original papers](https://dl.acm.org/doi/10.1145/3441852.3471202) they found
+
+> Our results show that due to the inaccessibility of online data visualizations, screen-reader users extract information 61.48% less accurately and spend 210.96% more time interacting with online data visualizations compared to non-screen-reader users
+
+Clearly there is a lot of room for improvement and research in this area.
+
+Thanks for reading!
